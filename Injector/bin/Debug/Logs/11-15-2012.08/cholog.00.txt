@@ -1,0 +1,3 @@
+2012-11-15 03:52:29.1942000, No Environment found for this host.
+2012-11-15 03:52:29.4622000, Controller.vshost.exe Information: 0 : Using AppConfigPath: C:\Users\Jason\Dropbox\Sc2AiBot\Controller\bin\Debug\Config\Controller.exe.xml
+2012-11-15 03:52:29.8602000, DYMANIC Enabled.

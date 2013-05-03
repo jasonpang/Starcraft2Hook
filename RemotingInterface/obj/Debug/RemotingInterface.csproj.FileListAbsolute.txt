@@ -1,0 +1,14 @@
+C:\Users\Jason\Dropbox\Sc2AiBot\RemotingInterface\bin\Debug\RemotingInterface.dll
+C:\Users\Jason\Dropbox\Sc2AiBot\RemotingInterface\bin\Debug\RemotingInterface.pdb
+C:\Users\Jason\Dropbox\Sc2AiBot\RemotingInterface\obj\Debug\RemotingInterface.csprojResolveAssemblyReference.cache
+C:\Users\Jason\Dropbox\Sc2AiBot\RemotingInterface\obj\Debug\RemotingInterface.dll
+C:\Users\Jason\Dropbox\Sc2AiBot\RemotingInterface\obj\Debug\RemotingInterface.pdb
+C:\Home\Code\Starcraft2AIBot\RemotingInterface\bin\Debug\RemotingInterface.dll
+C:\Home\Code\Starcraft2AIBot\RemotingInterface\bin\Debug\RemotingInterface.pdb
+C:\Home\Code\Starcraft2AIBot\RemotingInterface\bin\Debug\Logging.dll
+C:\Home\Code\Starcraft2AIBot\RemotingInterface\bin\Debug\NLog.dll
+C:\Home\Code\Starcraft2AIBot\RemotingInterface\bin\Debug\Logging.pdb
+C:\Home\Code\Starcraft2AIBot\RemotingInterface\bin\Debug\NLog.xml
+C:\Home\Code\Starcraft2AIBot\RemotingInterface\obj\Debug\RemotingInterface.csprojResolveAssemblyReference.cache
+C:\Home\Code\Starcraft2AIBot\RemotingInterface\obj\Debug\RemotingInterface.dll
+C:\Home\Code\Starcraft2AIBot\RemotingInterface\obj\Debug\RemotingInterface.pdb

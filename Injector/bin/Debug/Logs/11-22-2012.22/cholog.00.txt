@@ -1,0 +1,3 @@
+2012-11-22 04:00:24.7458638, No Environment found for this host.
+2012-11-22 04:00:25.1329112, Controller.vshost.exe Information: 0 : Using AppConfigPath: C:\Home\Code\Starcraft2AIBot\Controller\bin\Debug\Config\Controller.exe.xml
+2012-11-22 04:00:25.6449726, DYMANIC Enabled.

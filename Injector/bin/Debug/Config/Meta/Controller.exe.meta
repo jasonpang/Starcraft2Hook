@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <Main bindingMode="TwoWay" defaultable="true" silent="true">
+    <configStorage>Cinchoo.Core.Configuration.ChoIniConfigStorage, Cinchoo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7dacd80ff3e33de</configStorage>
+    <logInfo condition="true" directory="Settings" fileName="Controller.Configuration.MainConfiguration.log" />
+  </Main>
+  <Window bindingMode="TwoWay" defaultable="true" silent="true">
+    <configStorage>Cinchoo.Core.Configuration.ChoIniConfigStorage, Cinchoo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7dacd80ff3e33de</configStorage>
+    <logInfo condition="true" directory="Settings" fileName="Controller.Configuration.WindowConfiguration.log" />
+  </Window>
+  <Injection bindingMode="TwoWay" defaultable="true" silent="true">
+    <configStorage>Cinchoo.Core.Configuration.ChoIniConfigStorage, Cinchoo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7dacd80ff3e33de</configStorage>
+    <logInfo condition="true" directory="Settings" fileName="Controller.Configuration.InjectionConfiguration.log" />
+  </Injection>
+</configuration>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25A5B357-2282-4F9C-91D3-B352C33E5028}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Game</RootNamespace>
+    <AssemblyName>Game</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>StrongName.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EasyHook, Version=2.7.0.0, Culture=neutral, PublicKeyToken=4b580fca19d0b0c5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\EasyHook\EasyHook.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\Packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>..\Packages\SharpDX\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9">
+      <HintPath>..\Packages\SharpDX\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntryPoint.cs" />
+    <Compile Include="Extensions\MathExtensions.cs" />
+    <Compile Include="Extensions\NumberExtensions.cs" />
+    <Compile Include="Extensions\EventHandlerExtensions.cs" />
+    <Compile Include="Extensions\SharpDX\DataStreamExtensions.cs" />
+    <Compile Include="Extensions\SharpDX\Direct3D\VertexElementExtensions.cs" />
+    <Compile Include="Graphics\IDrawable.cs" />
+    <Compile Include="Transformers\MirrorBase.cs" />
+    <Compile Include="Interfaces\IAttachable.cs" />
+    <Compile Include="Hooks\HookBase.cs" />
+    <Compile Include="Interpreters\InterpreterBase.cs" />
+    <Compile Include="Interfaces\IInstallable.cs" />
+    <Compile Include="Transformers\TransformerBase.cs" />
+    <Compile Include="GameContext.cs" />
+    <Compile Include="Hooks\Graphics\Direct3D9.cs" />
+    <Compile Include="Hooks\Graphics\Direct3D9Hook.cs" />
+    <Compile Include="Hooks\Graphics\Direct3D9Hook.Events.cs" />
+    <Compile Include="Hooks\Graphics\Direct3D9Hook.HookActivation.cs" />
+    <Compile Include="Hooks\Graphics\Direct3D9Hook.Hooks.cs" />
+    <Compile Include="Hooks\Graphics\Direct3D9Hook.HookSetup.cs" />
+    <Compile Include="Hooks\Graphics\Direct3D9Hook.OnPrepareHook.cs" />
+    <Compile Include="Hooks\Graphics\Direct3D9Hook.UtilityMethods.cs" />
+    <Compile Include="Interpreters\Graphics\GraphicsInterpreter.cs" />
+    <Compile Include="Managers\GraphicsManager.cs" />
+    <Compile Include="Managers\InputManager.cs" />
+    <Compile Include="Managers\StateManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\GraphicsProvider.cs" />
+    <Compile Include="Providers\InputProvider.cs" />
+    <Compile Include="Providers\StateProvider.cs" />
+    <Compile Include="State\GraphicsState.cs" />
+    <Compile Include="State\InputState.cs" />
+    <Compile Include="Transformers\Graphics\Direct3D9Transformer.cs" />
+    <Compile Include="Transformers\Graphics\Mirrors\Direct3D9Mirror.cs" />
+    <Compile Include="Transformers\Graphics\Mirrors\Direct3D9Mirror.Hooks.cs" />
+    <Compile Include="Transformers\Graphics\Overlays\Console\ConsoleOverlay.cs" />
+    <Compile Include="Transformers\Graphics\Overlays\Direct3D9Overlay.cs" />
+    <Compile Include="Transformers\Graphics\Overlays\Fps\FpsOverlay.cs" />
+    <Compile Include="Transformers\Graphics\Overlays\Fps\FpsOverlay.Drawing.cs" />
+    <Compile Include="Transformers\Graphics\Overlays\OverlayBase.cs" />
+    <Compile Include="Input\Key.cs" />
+    <Compile Include="Graphics\Menu.cs" />
+    <Compile Include="Graphics\MenuItem.cs" />
+    <Compile Include="Transformers\Graphics\Overlays\StrideLogger\Model.cs" />
+    <Compile Include="Transformers\Graphics\Overlays\StrideLogger\StrideLoggerOverlay.cs" />
+    <Compile Include="Utilities\Direct3DUtil.cs" />
+    <Compile Include="Utilities\Windows.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StrongName.snk" />
+    <Compile Include="Transformers\Graphics\Mirrors\Direct3D9Mirror.Fields.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hooks\Input\" />
+    <Folder Include="Interpreters\Input\" />
+    <Folder Include="Transformers\Input\Mirrors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{39c56209-f6e4-4873-a5be-aa5b8b465219}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y $(ProjectDir)$(OutDir)$(TargetFileName) $(SolutionDir)Injector\$(OutDir)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
