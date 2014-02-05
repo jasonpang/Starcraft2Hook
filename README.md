@@ -1,12 +1,12 @@
 Starcraft2Hook
 ==============
 
-Hook Starcraft 2's DirectX APIs to draw overlays and read information. Inspired by the similar [http://graphics.stanford.edu/~mdfisher/GameAIs.html](Stanford project).
+Hook Starcraft 2's DirectX APIs to draw overlays and read information. Inspired by the similar [Stanford project](http://graphics.stanford.edu/~mdfisher/GameAIs.html).
 
 Description
 ------------
 
-The [http://graphics.stanford.edu/~mdfisher/GameAIs.html](Stanford project), written in C+, hooks into the game's DirectX drawing to read text and model data so that it can play the game. My program, written in C#, is able to hook into the game and display an FPS counter and colorize textures. The transition from managed to unmanaged code (C# is managed, DirectX is unmanaged) slows down the frame rate to around 2 FPS even on a fast quad-core computer.
+The [Stanford project](http://graphics.stanford.edu/~mdfisher/GameAIs.html), written in C+, hooks into the game's DirectX drawing to read text and model data so that it can play the game. My program, written in C#, is able to hook into the game and display an FPS counter and colorize textures. The transition from managed to unmanaged code (C# is managed, DirectX is unmanaged) slows down the frame rate to around 2 FPS even on a fast quad-core computer.
 
 Tech Stack
 ----------
