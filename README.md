@@ -18,5 +18,5 @@ Tech Stack
   
 Interesting tidbits
 -------------------
-* Of the 118 DirectX API functions, almost all are hooked
+* Of the 118 DirectX API functions, almost all are intercepted with proper marshalling between unmanaged and managed data types and structs
 * Extensive program architecture, multiple library projects with an Injector to inject the DLL into the target process
