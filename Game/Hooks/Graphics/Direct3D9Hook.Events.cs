@@ -16,11 +16,13 @@ namespace Game.Hooks.Graphics
         private delegate Result ReportCreatePixelShader(ref IntPtr devicePointer, ref IntPtr shaderBytecode, ref IntPtr pixelShader);
 
         /* Allocation update callbacks */
-public delegate bool ReportUnlockTexture(ref SurfaceDescription Desc, ref Surface Bmp, ref IntPtr Handle);
-public delegate void ReportLockVertexBuffer( &Data, D3DVERTEXBUFFER_DESC &Desc);
-public delegate void ReportLockIndexBuffer(BufferLockData &Data, D3DINDEXBUFFER_DESC &Desc);
 
-public delegate void ReportDestroy(ref IntPtr Handle);
+        public delegate bool ReportUnlockTexture(ref SurfaceDescription Desc, ref Surface Bmp, ref IntPtr Handle);
+        //public delegate void ReportLockVertexBuffer(ref BufferLockData Data, ref VertexBufferDescription Desc);
+        //public delegate void ReportLockIndexBuffer(ref BufferLockData Data, ref VertexBufferDescription Desc);
+ 
+
+        public delegate void ReportDestroy(ref IntPtr Handle);
 
         public delegate void ResetEventDelegate(ref IntPtr devicePointer, ref PresentParameters[] presentParameters);
         public event ResetEventDelegate OnReset;

@@ -1,3 +1,0 @@
-2012-12-02 03:00:13.8381620, No Environment found for this host.
-2012-12-02 03:00:14.2432108, Injector.vshost.exe Information: 0 : Using AppConfigPath: C:\Home\Code\Starcraft2AIBot\Injector\bin\Debug\Config\Controller.exe.xml
-2012-12-02 03:00:14.7632719, DYMANIC Enabled.

@@ -14,7 +14,7 @@ namespace Injector
         [STAThread]
         public static void Main()
         {
-            SetupApplicationConfiguration();
+            //SetupApplicationConfiguration();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -24,8 +24,8 @@ namespace Injector
         private static void SetupApplicationConfiguration()
         {
             ChoApplication.ApplyFrxParamsOverrides += new EventHandler<ChoFrxParamsEventArgs>(ChoApplication_ApplyFrxParamsOverrides);
-            //ChoFramework.Initialize();
-            //AppDomain.CurrentDomain.ProcessExit += (sender, args) => ChoFramework.Shutdown();
+            ChoFramework.Initialize();
+            AppDomain.CurrentDomain.ProcessExit += (sender, args) => ChoFramework.Shutdown();
         }
 
         private static void ChoApplication_ApplyFrxParamsOverrides(object sender, ChoFrxParamsEventArgs e)

@@ -20,7 +20,7 @@ namespace Logging
 
             var target = new FileTarget
                              {
-                                 FileName = "C:/Sc2Ai/Logs/Sc2AiBot.log",
+                                 FileName = "C:/Sc2Ai/Sc2AiBot.log",
                                  Layout = "${longdate} ${level} ${callsite} ${message}",
                                  DeleteOldFileOnStartup = true
                              };

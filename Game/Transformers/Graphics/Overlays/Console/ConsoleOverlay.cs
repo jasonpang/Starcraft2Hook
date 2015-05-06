@@ -16,6 +16,7 @@ namespace Game.Transformers.Graphics.Overlays.Console
 
         public override void Attach()
         {
+
         }
 
         public override void Detach()

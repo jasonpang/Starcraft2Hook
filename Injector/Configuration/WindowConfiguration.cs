@@ -9,7 +9,7 @@ namespace Injector.Configuration
         /// <summary>
         /// Set to true to save the window position on exit.
         /// </summary>
-        [ChoPropertyInfo("SaveWindowPositionOnExit", DefaultValue = true)]
+        [ChoPropertyInfo("SaveWindowPositionOnExit", DefaultValue = false)]
         public bool SaveWindowPositionOnExit { get; set; }
 
         /// <summary>

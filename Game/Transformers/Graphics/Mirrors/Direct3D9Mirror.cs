@@ -18,13 +18,15 @@ namespace Game.Transformers.Graphics.Mirrors
         }
 
         public override void Attach()
-        {/*
+        {
             Hook.OnCreateTexture += Hook_OnCreateTexture;
-            Hook.OnSetTexture += Hook_OnSetTexture;*/
+            Hook.OnSetTexture += Hook_OnSetTexture;
         }
 
         public override void Detach()
         {
+            Hook.OnCreateTexture -= Hook_OnCreateTexture;
+            Hook.OnSetTexture -= Hook_OnSetTexture;
         }
     }
 }

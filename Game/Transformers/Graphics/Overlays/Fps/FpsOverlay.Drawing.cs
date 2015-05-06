@@ -70,9 +70,9 @@ namespace Game.Transformers.Graphics.Overlays.Fps
         {
             try
             {
-                this.Font = new Font ("Impact", 18.0f);
+                this.Font = new Font ("Segoe UI", 18.0f);
                 this.drawingFont = new SharpDX.Direct3D9.Font (this.Device, this.Font);
-                this.Color = System.Drawing.Color.Yellow;
+                this.Color = System.Drawing.Color.Cyan;
 
                 this.lastDrawTime = DateTime.Now;
                 this.NumFractionalDigits = 1;

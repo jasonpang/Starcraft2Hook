@@ -515,9 +515,6 @@ namespace Game.Hooks.Graphics
             }
         }
 
-        private Texture ChamsTextureRed;
-        private Texture ChamsTextureGreen;
-
         private Result DrawIndexedPrimitive(IntPtr devicePointer, PrimitiveType primitiveType, int baseVertexIndex, int minVertexIndex, int numVertices, int startIndex, int primitiveCount)
         {
             try

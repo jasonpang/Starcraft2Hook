@@ -4,6 +4,7 @@ using Game.Managers;
 using Game.Providers;
 using Game.State;
 using Game.Transformers.Graphics;
+using Game.Transformers.Graphics.Overlays.Fps;
 using Game.Transformers.Graphics.Overlays.StrideLogger;
 using NLog;
 
@@ -52,13 +53,21 @@ namespace Game
         private static void InstallHooks (GameContext context)
         {
             context.GraphicsHook = new Direct3D9Hook();
-            context.GraphicsHook.Install();
-            //context.GraphicsHook.InstallOnly (Direct3D9DeviceFunctions.CreateQuery);
-            /*context.GraphicsHook.InstallOnly (Direct3D9DeviceFunctions.CreateTexture,
-                                              Direct3D9DeviceFunctions.ColorFill);*/
-            /*context.GraphicsHook.InstallOnly (Direct3D9DeviceFunctions.DrawIndexedPrimitive,
+            //context.GraphicsHook.Install();
+            /*
+            context.GraphicsHook.InstallOnly (Direct3D9DeviceFunctions.CreateQuery);
+            context.GraphicsHook.InstallOnly (Direct3D9DeviceFunctions.CreateTexture,
+                                              Direct3D9DeviceFunctions.ColorFill);
+            context.GraphicsHook.InstallOnly (Direct3D9DeviceFunctions.DrawIndexedPrimitive,
                                               Direct3D9DeviceFunctions.SetStreamSource,
                                               Direct3D9DeviceFunctions.EndScene);*/
+            context.GraphicsHook.InstallOnly(Direct3D9DeviceFunctions.CreateQuery,
+                                              Direct3D9DeviceFunctions.CreateTexture,
+                                              Direct3D9DeviceFunctions.SetTexture,
+                                              Direct3D9DeviceFunctions.ColorFill,
+                                              Direct3D9DeviceFunctions.DrawIndexedPrimitive,
+                                              Direct3D9DeviceFunctions.SetStreamSource,
+                                              Direct3D9DeviceFunctions.EndScene);
         }
 
         private static void UninstallHooks (GameContext context)
@@ -69,6 +78,8 @@ namespace Game
         private static void AttachTransformers (GameContext context)
         {
             context.GraphicsTransformer = new Direct3D9Transformer(context.GraphicsHook);//, new StrideLoggerOverlay (context));
+            //context.GraphicsTransformer.GraphicsOverlays.Add(new FpsOverlay(context));
+            context.GraphicsTransformer.GraphicsOverlays.Add(new StrideLoggerOverlay(context));
             context.GraphicsTransformer.Attach();
         }
 
